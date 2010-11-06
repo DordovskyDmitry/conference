@@ -56,11 +56,11 @@ Conference::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
   root :to => 'static#main'
-  match 'page/:action' => 'static#main'
+  match 'page/:action', :controller => :static
 
   resources :users do
-    member do
-      get 'schedule'
+    collection do
+      get :program
     end
   end
 
