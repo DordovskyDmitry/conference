@@ -8,3 +8,6 @@ en:
     list:  "List of participants"
     registration: "Registration"
     program: "Conference program"
+  flash:
+    add_user: "Participant was added."
+    update_user: "Participant was updated."
