@@ -64,4 +64,6 @@ Conference::Application.routes.draw do
     end
   end
 
+  resource :user_sessions, :only => [:new, :create, :destroy]
+
 end
