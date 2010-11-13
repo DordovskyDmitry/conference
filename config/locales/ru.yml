@@ -8,18 +8,25 @@ ru:
   flash:
     add_user: "Участник добавлен."
     update_user: "Участник обновлен."
+  link:
+    admin:
+      edit: "Править"
+      delete: "Удалить"
+    all:
+      show: "Показать"
+  confirmation: "Вы уверенны?"    
 
   activerecord:
     models:
       user:
-        one:    "участник"
-        other:  "участники"
+        one:    "Участник"
+        other:  "Участники"
       report:
-        one:    "доклад"
-        other:  "доклады"
+        one:    "Доклад"
+        other:  "Доклады"
       address:
-        one:    "адрес"
-        other:  "адреса"
+        one:    "Адрес"
+        other:  "Адреса"
     attributes:
       user:
         first_name: "Имя"

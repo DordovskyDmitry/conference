@@ -11,18 +11,25 @@ en:
   flash:
     add_user: "Participant was added."
     update_user: "Participant was updated."
+  link:
+    admin:
+      edit: "Edit"
+      delete: "Delete"
+    all:
+      show: "Show"
+  confirmation: "Are you sure?"   
 
   activerecord:
     models:
       user:
-        one:    "participant"
-        other:  "participants"
+        one:    "Participant"
+        other:  "Participants"
       report:
-        one:    "report"
-        other:  "reports"
+        one:    "Report"
+        other:  "Reports"
       address:
-        one:    "address"
-        other:  "addresses"
+        one:    "Address"
+        other:  "Addresses"
     attributes:
       user:
         first_name: "Name"
