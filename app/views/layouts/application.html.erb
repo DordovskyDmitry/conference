@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<% lang_menu(request.env['REQUEST_URI']) %>
+
 <div>
   <ul>
     <li> <%= link_to_unless_current(t("menu.main"), root_url) %></li>

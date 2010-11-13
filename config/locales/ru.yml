@@ -1,0 +1,10 @@
+ru:
+  menu:
+    main: "Главная"
+    contacts: "Контакты"
+    list:  "Список участников"
+    registration: "Регистрация"
+    program: "Программа конференции"
+  flash:
+    add_user: "Участник добавлен."
+    update_user: "Участник обновлен."
