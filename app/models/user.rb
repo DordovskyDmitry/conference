@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   
   validates_associated :report, :address
 
+  delegate :section, :to => :report
+
   def full_name
     "#{first_name} #{last_name}"
   end

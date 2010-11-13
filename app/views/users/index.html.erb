@@ -1,7 +1,10 @@
 <h1><%= User.human_name(:count => @users.count) %></h1>
 
-<table>
-  <% @users.each do |user| %>
+
+<% @users.each_key do |key|%>
+  <h3><%= key %></h3>
+  <table>
+    <% @users[key].each do |user| %>
       <tr>
         <td><%= user.full_name.force_encoding "utf-8" %></td>
         <td><%= user.place_of_work.force_encoding "utf-8" %></td>
@@ -14,5 +17,7 @@
           <td><%= link_to t('link.admin.delete'), user, :confirm => "confirmation", :method => :delete %></td>
         <% end %>
       </tr>
-  <% end %>
-</table>
+    <% end %>
+  </table>
+<% end %>
+
