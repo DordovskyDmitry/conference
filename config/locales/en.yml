@@ -11,3 +11,31 @@ en:
   flash:
     add_user: "Participant was added."
     update_user: "Participant was updated."
+
+  activerecord:
+    models:
+      user:
+        one:    "participant"
+        other:  "participants"
+      report:
+        one:    "report"
+        other:  "reports"
+      address:
+        one:    "address"
+        other:  "addresses"
+    attributes:
+      user:
+        first_name: "Name"
+        last_name: "Second name"
+        birthday: "Birthday"
+        place_of_work: "Plase of work"
+        position: "Position"
+      report:
+        topic: "Topic"
+        section: "Section"
+      address:
+        full_address: "Full address"
+        work_phone: "Work phone"
+        home_phone: "Home phone"
+        email:  "Email"
+        report_method: "Report method"

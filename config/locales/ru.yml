@@ -8,3 +8,31 @@ ru:
   flash:
     add_user: "Участник добавлен."
     update_user: "Участник обновлен."
+
+  activerecord:
+    models:
+      user:
+        one:    "участник"
+        other:  "участники"
+      report:
+        one:    "доклад"
+        other:  "доклады"
+      address:
+        one:    "адрес"
+        other:  "адреса"
+    attributes:
+      user:
+        first_name: "Имя"
+        last_name: "Фамилия"
+        birthday: "Дата рождения"
+        place_of_work: "Место работы"
+        position: "Должность"
+      report:
+        topic: "Тема доклада"
+        section: "Секция"
+      address:
+        full_address: "Адрес"
+        work_phone: "Рабочий телефон"
+        home_phone: "Домашний телефон"
+        email:  "Email"
+        report_method: "Способ уведомления"
