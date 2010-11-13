@@ -1,0 +1,19 @@
+<h1><%= User.human_name(:count => @users.count) %></h1>
+
+<table>
+  <% @users.each do |user| %>
+      <tr>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.place_of_work %></td>
+      </tr>
+      <tr>
+        <td colspan=3><%= user.report.topic %></td>
+      </tr>
+      <tr>
+        <td><%= link_to t('for_link.show'), user %></td>
+        <td><%= link_to t('for_link.edit'), edit_user_path(user) %></td>
+        <td><%= link_to t('for_link.destroy'), user, :confirm => t('are_you_sure'), :method => :delete %></td>
+      </tr>
+  <% end %>
+</table>
