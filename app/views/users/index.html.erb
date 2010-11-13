@@ -3,17 +3,16 @@
 <table>
   <% @users.each do |user| %>
       <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.place_of_work %></td>
+        <td><%= user.full_name.force_encoding "utf-8" %></td>
+        <td><%= user.place_of_work.force_encoding "utf-8" %></td>
       </tr>
       <tr>
-        <td colspan=3><%= user.report.topic %></td>
-      </tr>
-      <tr>
-        <td><%= link_to t('for_link.show'), user %></td>
-        <td><%= link_to t('for_link.edit'), edit_user_path(user) %></td>
-        <td><%= link_to t('for_link.destroy'), user, :confirm => t('are_you_sure'), :method => :delete %></td>
+        <td colspan=2><%= user.report.topic.force_encoding "utf-8" %></td>
+        <td><%= link_to t('link.all.show'), user %></td>
+        <% if authenticated? %>
+          <td><%= link_to t('link.admin.edit'), edit_user_path(user) %></td>
+          <td><%= link_to t('link.admin.delete'), user, :confirm => "confirmation", :method => :delete %></td>
+        <% end %>
       </tr>
   <% end %>
 </table>
