@@ -23,8 +23,8 @@
                 <td colspan=3>
                   <% form_for user.report, :url => user_report_path(user) do |f| %>
                       <%= f.error_messages %>
-                      <%= f.datetime_select :begin_report %>
-                      <%= f.datetime_select :end_report %>
+                      <%= f.datetime_select :begin_report, :discard_year => true %>
+                      <%= f.datetime_select :end_report, :discard_year => true %>
                       <%= f.submit %>
                   <% end %>
                 </td>
