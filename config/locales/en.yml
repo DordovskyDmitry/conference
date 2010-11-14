@@ -18,7 +18,21 @@ en:
       delete: "Delete"
       show: "Show"
       edit_time: "Change time"
-  confirmation: "Are you sure?"   
+  confirmation: "Are you sure?"
+
+  titles:
+    static:
+      main: "Main "
+      contacts: "Contacts"
+    users:
+      index: "List of participants"
+      show: "Show participant"
+      edit: "Edit participant"
+      new: "Registration"
+    reports:
+      edit: "Edit report"
+    user_sessions:
+      new: "Login"
 
   activerecord:
     models:
