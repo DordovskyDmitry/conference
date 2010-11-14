@@ -1,44 +1,46 @@
 <%= form_for @user do |f| %>
-  <%= f.error_messages %>
+    <%= f.error_messages %>
 
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %><br />
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %><br />
 
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %><br />
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %><br />
 
-  <%= f.label :birthday %>
-  <%= f.date_select :birthday, :start_year => 1920, :end_year => 2000 %><br />
+    <%= f.label :birthday %>
+    <%= f.date_select :birthday, :start_year => 1920, :end_year => 2000 %><br />
 
-  <%= f.label :place_of_work %>
-  <%= f.text_field :place_of_work %><br />
+    <%= f.label :place_of_work %>
+    <%= f.text_field :place_of_work %><br />
 
-  <%= f.label :position %>
-  <%= f.text_field :position %><br />
+    <%= f.label :position %>
+    <%= f.text_field :position %><br />
 
-  <%= f.fields_for :report do |r| %>
-    <%= r.error_messages %>
-    <%= r.label :topic %>
-    <%= r.text_field :topic %><br />
-    <%= r.label :section %>
-    <%= r.select :section, Report::SECTION %><br />
-    <%= r.label :begin_report %>
-    <%= r.datetime_select :begin_report, :discard_year => true %><br />
-    <%= r.label :end_report %>
-    <%= r.datetime_select :end_report, :discard_year => true  %><br />
-  <% end %>
+    <%= f.fields_for :report do |r| %>
+        <%= r.error_messages %>
+        <%= r.label :topic %>
+        <%= r.text_field :topic %><br />
+        <%= r.label :section %>
+        <%= r.select :section, Report::SECTION %><br />
+        <% if params[:action] != "new" %>
+            <%= r.label :begin_report %>
+            <%= r.datetime_select :begin_report, :discard_year => true %><br />
+            <%= r.label :end_report %>
+            <%= r.datetime_select :end_report, :discard_year => true %><br />
+        <% end %>
+    <% end %>
 
-  <%= f.fields_for :address do |a| %>
-    <%= a.error_messages %>
-    <%= a.label :full_address %>
-    <%= a.text_area :full_address %><br />
-    <%= a.label :email %>
-    <%= a.text_field :email %><br />
-    <%= a.label :work_phone %>
-    <%= a.text_field :work_phone %><br />
-    <%= a.label :home_phone %>
-    <%= a.text_field :home_phone %><br />
-  <% end %>
+    <%= f.fields_for :address do |a| %>
+        <%= a.error_messages %>
+        <%= a.label :full_address %>
+        <%= a.text_area :full_address %><br />
+        <%= a.label :email %>
+        <%= a.text_field :email %><br />
+        <%= a.label :work_phone %>
+        <%= a.text_field :work_phone %><br />
+        <%= a.label :home_phone %>
+        <%= a.text_field :home_phone %><br />
+    <% end %>
 
-  <%= f.submit %>
+    <%= f.submit %>
 <% end %>
