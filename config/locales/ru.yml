@@ -8,12 +8,13 @@ ru:
   flash:
     add_user: "Участник добавлен."
     update_user: "Участник обновлен."
+    update_report: "доклад обновлен."
   link:
     admin:
       edit: "Править"
       delete: "Удалить"
-    all:
       show: "Показать"
+      edit_time: "Изменить время"
   confirmation: "Вы уверенны?"    
 
   activerecord:

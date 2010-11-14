@@ -52,6 +52,6 @@ class UsersController < ApplicationController
   end
 
   def get_users
-    @users = User.all.group_by(&:section)
+    @users = User.all.group_by(& :section)
   end
 end

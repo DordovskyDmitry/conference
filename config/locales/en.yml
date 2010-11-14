@@ -11,12 +11,13 @@ en:
   flash:
     add_user: "Participant was added."
     update_user: "Participant was updated."
+    update_report: "Report was updated."
   link:
     admin:
       edit: "Edit"
       delete: "Delete"
-    all:
       show: "Show"
+      edit_time: "Change time"
   confirmation: "Are you sure?"   
 
   activerecord:

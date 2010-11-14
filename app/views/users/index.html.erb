@@ -1,23 +1,36 @@
-<h1><%= User.human_name(:count => @users.count) %></h1>
+<h1><%= User.model_name.human(:count => @users.count) %></h1>
 
 
-<% @users.each_key do |key|%>
-  <h3><%= key %></h3>
-  <table>
-    <% @users[key].each do |user| %>
-      <tr>
-        <td><%= user.full_name.force_encoding "utf-8" %></td>
-        <td><%= user.place_of_work.force_encoding "utf-8" %></td>
-      </tr>
-      <tr>
-        <td colspan=2><%= user.report.topic.force_encoding "utf-8" %></td>
-        <td><%= link_to t('link.all.show'), user %></td>
-        <% if authenticated? %>
-          <td><%= link_to t('link.admin.edit'), edit_user_path(user) %></td>
-          <td><%= link_to t('link.admin.delete'), user, :confirm => "confirmation", :method => :delete %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </table>
+<% @users.each_key do |key| %>
+    <h3><%= key %></h3>
+    <table>
+      <% @users[key].each do |user| %>
+          <tr>
+            <td><%= user.full_name.force_encoding "utf-8" %></td>
+            <td><%= user.place_of_work.force_encoding "utf-8" %></td>
+          </tr>
+          <tr>
+            <td colspan=3><%= user.report.topic.force_encoding "utf-8" %></td>
+            <% if authenticated? %>
+                <td><%= link_to t('link.admin.show'), user %></td>
+                <td><%= link_to t('link.admin.edit_time'), edit_user_report_path(user), :remote => true %></td>
+                <td><%= link_to t('link.admin.edit'), edit_user_path(user) %></td>
+                <td><%= link_to t('link.admin.delete'), user, :confirm => "confirmation", :method => :delete %></td>
+            <% end %>
+          </tr>
+          <% if authenticated? %>
+              <tr id=<%= "form_#{user.id}" %>>
+                <td colspan=3>
+                  <% form_for user.report, :url => user_report_path(user) do |f| %>
+                      <%= f.error_messages %>
+                      <%= f.datetime_select :begin_report %>
+                      <%= f.datetime_select :end_report %>
+                      <%= f.submit %>
+                  <% end %>
+                </td>
+              </tr>
+          <% end %>
+      <% end %>
+    </table>
 <% end %>
 
