@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+#footer {
+    height: 60px;
+}
+#footer #lang {
+    float: right;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+#footer #lang span {
+    margin-left: 10px;
+}
+
+#menu {
+    width: 300px;
+    float: left;
+    margin-top: 50px;
+}
+
+#menu ul {
+    padding-left: 20px;
+}
+
+#menu li {
+    list-style: none;
+    margin-top: 10px;
+}
+
+#content {
+    display: inline-block;
+}

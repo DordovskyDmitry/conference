@@ -8,19 +8,30 @@
 </head>
 <body>
 
-<% lang_menu(request.env['REQUEST_URI']) %>
-
-<div>
-  <ul>
-    <li> <%= link_to_unless_current(t("menu.main"), root_url) %></li>
-    <li> <%= link_to_unless_current(t("menu.contacts"), {:controller => :static, :action => :contacts}) %></li>
-    <li> <%= link_to_unless_current(t("menu.registration"), {:controller => :users, :action => :new}) %></li>
-    <li> <%= link_to_unless_current(t("menu.list"), {:controller => :users, :action => :index}) %></li>
-    <li> <%= link_to_unless_current(t("menu.program"), program_users_path ) %></li>
-  </ul>
+<div id='footer'>
+  <div id='lang'>
+    <% lang_menu(request.env['REQUEST_URI']) %>
+    <span>
+       <% login_url %>     
+    </span>
+  </div>
 </div>
 
-<%= yield %>
+<div id='wrapper'>
+  <div id='menu'>
+    <ul>
+      <li> <%= link_to_unless_current(t("menu.main"), root_url) %></li>
+      <li> <%= link_to_unless_current(t("menu.contacts"), {:controller => :static, :action => :contacts}) %></li>
+      <li> <%= link_to_unless_current(t("menu.registration"), {:controller => :users, :action => :new}) %></li>
+      <li> <%= link_to_unless_current(t("menu.list"), {:controller => :users, :action => :index}) %></li>
+      <li> <%= link_to_unless_current(t("menu.program"), program_users_path) %></li>
+    </ul>
+  </div>
+
+  <div id='content'>
+    <%= yield %>
+  </div>
+</div>
 
 </body>
 </html>

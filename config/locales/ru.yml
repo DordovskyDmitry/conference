@@ -170,6 +170,10 @@ ru:
     user_sessions:
       new: "Login"
 
+  auth:
+    login: "Админ?"
+    logout: "Выйти"
+
   activerecord:
     models:
       user:
