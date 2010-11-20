@@ -1,11 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   helper_method :authenticated?
-  before_filter :save_locale
   before_filter :set_locale
 
   def require_admin
-    redirect_to root_url unless authenticated? 
+    redirect_to root_url unless authenticated?
   end
 
   def authenticated?
@@ -13,10 +12,11 @@ class ApplicationController < ActionController::Base
   end
 
   def set_locale
-    I18n.locale = cookies[:lang] || :en
+    # ((lang = request.env['HTTP_ACCEPT_LANGUAGE']) && lang[/^[a-z]{2}/])
+    I18n.locale = params[:locale] ||  'en'
   end
 
-  def save_locale
-    cookies[:lang] = params[:lang] if (params[:lang] != cookies[:lang]) && ['ru','en'].include?(params[:lang])
+  def default_url_options(options = {})
+    {:locale => I18n.locale}
   end
 end

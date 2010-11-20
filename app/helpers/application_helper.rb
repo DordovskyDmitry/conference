@@ -1,8 +1,14 @@
 module ApplicationHelper
 
   def lang_menu(this_page)
-    ['ru','en'].each do |lang|
-      concat content_tag :span, link_to(lang, "#{this_page.gsub(/(\?|\/|\&)lang=\w*(\&|$)/,'')}?lang=#{lang}") 
+
+    if root_url.match(this_page)
+      this_page = root_url
+    end
+
+    ['ru', 'en'].each do |lang|
+      this_page.gsub!(/\/[a-z]{2}(\/|$)/, "/#{lang}/")
+      concat content_tag :span, link_to(lang, "#{this_page}")
     end
   end
 
