@@ -16,7 +16,7 @@ module ApplicationHelper
     if authenticated?
       concat link_to(t('auth.logout'), user_sessions_path, :method => :delete)
     else
-      concat link_to(t('auth.login'), new_user_sessions_path)
+      concat link_to(t('auth.login'), new_user_sessions_path, :remote => true)
     end
   end
 end
