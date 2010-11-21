@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
   before_filter :require_admin, :only => [:show, :edit, :update, :destroy]
   before_filter :get_user, :only => [:show, :edit, :update, :destroy]
-  before_filter :get_users, :only => [:index, :program]
 
   def index
+    @users = User.all.group_by(&:section)
   end
 
   def show
@@ -43,15 +43,13 @@ class UsersController < ApplicationController
   end
 
   def program
+    @users = User.includes(:report).where('reports.begin_report is not null and reports.end_report is not null').
+                  order('reports.begin_report').group_by(&:section)
   end
 
   private
 
   def get_user
     @user = User.find params[:id]
-  end
-
-  def get_users
-    @users = User.all.group_by(& :section)
   end
 end

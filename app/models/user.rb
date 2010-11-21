@@ -13,4 +13,8 @@ class User < ActiveRecord::Base
   def full_name
     "#{first_name} #{last_name}"
   end
+
+  def date_for_group
+    self.report.begin_report.beginning_of_day.strftime('%d-%m-%Y')
+  end
 end
