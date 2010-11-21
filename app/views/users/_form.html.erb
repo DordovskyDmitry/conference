@@ -17,7 +17,6 @@
     <%= f.text_field :position %><br />
 
     <%= f.fields_for :report do |r| %>
-        <%= r.error_messages %>
         <%= r.label :topic %>
         <%= r.text_field :topic %><br />
         <%= r.label :section %>
@@ -31,7 +30,6 @@
     <% end %>
 
     <%= f.fields_for :address do |a| %>
-        <%= a.error_messages %>
         <%= a.label :full_address %>
         <%= a.text_area :full_address %><br />
         <%= a.label :email %>

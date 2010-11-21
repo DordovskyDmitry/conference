@@ -21,7 +21,7 @@ class UsersController < ApplicationController
       flash[:notice] = t 'flash.add_user'
       redirect_to root_url
     else
-      render :action => :new
+      render :new
     end
   end
 

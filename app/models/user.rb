@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :address
   
   validates_associated :report, :address
+  validates_presence_of :first_name, :last_name, :place_of_work, :position
 
   delegate :section, :to => :report
 
