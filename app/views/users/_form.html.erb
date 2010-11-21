@@ -38,7 +38,15 @@
         <%= a.text_field :work_phone %><br />
         <%= a.label :home_phone %>
         <%= a.text_field :home_phone %><br />
+        Invitation methods: <br />
+        <%= a.label :email_invitation %>
+        <%= a.check_box :email_invitation %><br />
+        <%= a.label :post_invitation %>
+        <%= a.check_box :post_invitation %><br />
+
     <% end %>
 
     <%= f.submit %>
 <% end %>
+
+<%= t 'some text about hostel' %> <%= mail_to "confa@gmail.com"%>
