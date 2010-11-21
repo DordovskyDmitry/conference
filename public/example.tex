@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage[cp1251]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage{amsmath,amssymb,euscript,amsthm,amsfonts}
+\usepackage[russian]{babel}
+\usepackage{srcltx}
+
+
+\paperwidth=297mm \paperheight=210mm \topmargin=15mm
+\leftmargin=20mm \headheight=0pt \headsep=0pt \textheight=250mm
+\textwidth=170mm \voffset=-21mm \hoffset=-18mm
+
+
+\begin{document}
+
+\vskip 0.5cm
+%************************next line need for automatic contents building:
+\addtocontents{toc}{\protect\noindent И.\,И.~Иванов,
+    В.\,П.~Петров, Приближении периодических функций средними  Рисса
+    \dotfill\thepage\vspace{3mm}\par}
+%************************ TITLE *****************************:
+\begin{center}
+\textbf{\Large Приближении периодических функций средними  Рисса} \\[.5cm]
+\textbf{И.\,И.~Иванов}\ \ \textrm(Ростов, Россия),\quad
+\textbf{В.\,П.~Петров}\ \ \textrm{(Донецк, Украина)}\\[.2cm]
+\texttt{ivanov@rambler.ru}, \ \
+\texttt{petrov@gmail.com}\\[.3cm]
+\end{center}
+\bigskip
+
+\normalsize
+
+
+%*********************** ABSTRACT ***************************
+% Insert your abstract. The whole document must fit inside one page, preferably half a page.
+% Please, design the theorems according to the example below.
+
+
+Объектом исследования  работы являются следующие
+ ряды
+$$
+G^{\beta}_{\delta}(r,Q,\alpha,a,b):= \sum\limits_{k=0}^{\infty}(-1)^{(\beta+1)k}\,
+ \frac{Q\left(({\delta}^{\alpha}-({ak+b})^\alpha)_+\right)}{(ak+b)^{r+1}}
+ \;,
+\eqno(1)
+$$
+%%%%%%%%%%%
+ где
+ $\beta\in\mathbb{Z}$,  $r\in\mathbb{C}$.
+  В работе~[1]...
+ Асимптотическое разложение рядов~(1) ...
+
+\vskip 0.2cm \noindent {\bf Теорема 1.}
+ {\it
+ Пусть $Q$ -- алгебраический ...
+ Тогда  справедливы соотношения
+ $$
+ G^{2}_{\delta}(r,Q,\alpha,a,b)=
+ \sum\limits_{p=0}^{\mu}\frac{(-1)^pQ^{(p)}(\delta^\alpha)}{p!}\,a^{\alpha p-r-1}\widetilde{\zeta}\left(r+1-\alpha
+ p,\frac{b}{a}\right)+\ldots
+  \;.
+  \eqno(2)
+ $$
+ Здесь $\widetilde{\zeta}(s,u)$ -- целая по $s$ функция, равная ...
+ }
+
+ \smallskip
+
+%% Сведения о финансовой поддержке работы фондами и организациями.
+Работа выполнена при поддержке ... фонда фундаментальных
+исследований (грант \No~xxxxx).
+
+
+
+%********************** REFERENCES **************************
+\renewcommand{\refname}{}
+\vspace{-1.5cm}
+\begin{thebibliography}{9}
+\bibitem{Nag}
+  B.~Nagy,
+ {Approximation der Funktionen durch die aritchmetischen Mittel ihrer Fourierschen Reihen},
+ \textit{Acta Univ. Szeged. Sect. Sci. Math.}, \textbf{11}(1946), 71--84.
+ \bibitem{Tel}
+ С. А.~Теляковский,
+ {О приближении функций, удовлетворяющих условию Липшица, суммами Фейера},
+ \textit{Укр. мат. журн.}, \textbf{21:3}(1969), 334--343.
+\bibitem{Tel_Bask}
+ В. А. Баскаков, С. А.~Теляковский,
+ {О приближении дифференцируемых функций суммами Фейера},
+ \textit{Матем. заметки}, \textbf{32:2}(1982), 129--140.
+\end{thebibliography}
+%************************************************************
+
+\end{document}
