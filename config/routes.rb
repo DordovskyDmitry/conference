@@ -68,5 +68,6 @@ Conference::Application.routes.draw do
     end
 
     resource :user_sessions, :only => [:new, :create, :destroy]
+    match :upload, :to => "data_file#upload", :method => :post
   end
 end

@@ -1,25 +1,4 @@
-<% @users.each_key do |section| %>
-    <h3><%= section %></h3>
-    <table>
-      <% @users[section].group_by(&:date_for_group).each_key do |date| %>
-          <tr><h4><%= date.inspect %></h4></tr>
-          <% @users[section][date].each do |user| %>
-              <tr>
-                <td><%= user.report.begin_report.strftime('%d-%m-%Y') %></td>
-                <td><%= user.full_name.force_encoding "utf-8" %></td>
-                <td><%= user.place_of_work.force_encoding "utf-8" %></td>
-                <td><%= user.report.topic.force_encoding "utf-8" %></td>
-                <td><%= "#{user.report.begin_report.strftime('%H:%M')} - #{user.report.end_report.strftime('%H:%M')}" %></td>
-              </tr>
-              <% if authenticated? %>
-                  <tr>
-                    <td><%= link_to t('link.admin.show'), user %></td>
-                    <td><%= link_to t('link.admin.edit_time'), edit_user_report_path(user), :remote => true %></td>
-                    <td><%= link_to t('link.admin.edit'), edit_user_path(user) %></td>
-                    <td><%= link_to t('link.admin.delete'), user, :confirm => "confirmation", :method => :delete %></td>
-                  </tr>
-              <% end %>
-          <% end %>
-      <% end %>
-    </table>
+<% form_tag upload_path, :multipart => true do %>
+    <%= file_field_tag :upload %>
+    <%= submit_tag %>
 <% end %>
