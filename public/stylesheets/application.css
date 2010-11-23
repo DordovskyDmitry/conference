@@ -22,8 +22,8 @@ a {
 
 #menu {
     width: 300px;
-    float: left;
     margin-top: 50px;
+    float: left;
 }
 
 #menu ul {
@@ -37,4 +37,11 @@ a {
 
 #content {
     display: inline-block;
+    width: 600px;
+}
+
+#content img{
+    width: 300px;
+    height: 300px;
+    float: right;
 }
