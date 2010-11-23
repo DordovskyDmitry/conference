@@ -43,8 +43,7 @@ class UsersController < ApplicationController
   end
 
   def program
-    @users = User.includes(:report).where('reports.begin_report is not null and reports.end_report is not null').
-                  order('reports.begin_report').group_by(&:section)
+    @users = User.for_program
   end
 
   private

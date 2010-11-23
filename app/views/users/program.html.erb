@@ -3,13 +3,12 @@
     <%= submit_tag %>
 <% end %>
 
-<% @users.each_key do |section| %>
+<% @users.each do |section, hash| %>
     <h3><%= section %></h3>
     <table>
-      <% h = @users[section].group_by(& :date_for_group)%>
-      <% h.each_key do |date| %>
+      <% hash.each_key do |date| %>
           <tr><h5><%= date.inspect %></h5></tr>
-          <% h[date].each do |user| %>
+          <% hash[date].each do |user| %>
               <tr>
                 <td><%= user.full_name.force_encoding "utf-8" %></td>
                 <td><%= user.place_of_work.force_encoding "utf-8" %></td>
