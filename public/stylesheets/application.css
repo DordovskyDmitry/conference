@@ -19,17 +19,30 @@ a, a:hover {
 }
 
 #header {
-    height: 80px;
+    height: 150px;
+    padding-top: 10px;
 }
 
 #header #lang {
-    float: right;
+    position: absolute;
+    top: 5px;
+    right:5px;
     margin-right: 40px;
     margin-top: 20px;
 }
 
 #header #lang span {
     margin-left: 10px;
+}
+
+#header #title p {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#header #title #name {
+    font-size: 16px;
 }
 
 #wrapper {

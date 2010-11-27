@@ -8,16 +8,35 @@
 </head>
 <body>
 
-<div id='header'>
-  <div id='lang'>
-    <% lang_menu(request.env['REQUEST_URI']) %>
-    <span id='login_place'>
+<div id='wrapper'>
+  <div id='header'>
+    <div id='title'>
+      <p>
+        Донецкий национальный университет
+      </p>
+
+      <p>
+        Институт прикладной математики и механики АН Украины
+      </p>
+
+      <p id="name">
+        “Международная конференция по Современному Анализу”
+      </p>
+
+      <p>
+        Донецк, 20-23 июня 2011 года
+      </p>
+
+    </div>
+    <div id='lang'>
+      <% lang_menu(request.env['REQUEST_URI']) %>
+      <span id='login_place'>
       <% login_url %>
     </span>
+    </div>
   </div>
-</div>
 
-<div id='wrapper'>
+
   <div id='menu'>
     <ul>
       <li> <%= link_to_unless_current(t("menu.main"), root_url) %></li>
