@@ -44,6 +44,7 @@ class UsersController < ApplicationController
 
   def program
     @users = User.for_program
+    @pdf = DataFile.get_first_pdf.gsub('public', '')  unless  DataFile.get_first_pdf.blank?
   end
 
   private

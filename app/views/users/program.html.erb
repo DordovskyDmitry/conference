@@ -1,7 +1,12 @@
-<% form_tag upload_path, :multipart => true do %>
-    <%= file_field_tag :upload %>
-    <%= submit_tag %>
+<% if authenticated? %>
+    <%= form_tag upload_path, :multipart => true do %>
+        <%= file_field_tag :upload %>
+        <%= submit_tag %>
+    <% end %>
 <% end %>
+
+<%= link_to(t('rasp'), @pdf) if @pdf %>
+<%= link_to(t('del'), delete_all_path, :method => :delete) if @pdf %>
 
 <% @users.each do |section, hash| %>
     <h3><%= section %></h3>
