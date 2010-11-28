@@ -36,7 +36,16 @@ en:
 
   auth:
     login: "Admin?"
-    logout: "Logout" 
+    logout: "Logout"
+
+  header:
+    donnu: "Donetsk National University"
+    conference_name: "“International Conference in Modern Analysis”"
+    conference_data: "Donetsk, June 20-23, 2011"
+
+  doc:
+    design_rules: "design rules"
+    example: "example"
 
   activerecord:
     models:

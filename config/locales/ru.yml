@@ -174,6 +174,16 @@ ru:
     login: "Админ?"
     logout: "Выйти"
 
+  header:
+    donnu: "Донецкий национальный университет"
+    conference_name: "“Международная конференция по Современному Анализу”"
+    conference_data: "Донецк, 20-23 июня 2011 года"
+    
+  doc:
+    design_rules: "правила оформления"
+    example: "пример"
+
+
   activerecord:
     models:
       user:
