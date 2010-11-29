@@ -18,6 +18,10 @@ a, a:hover {
     color: blue;
 }
 
+#content form {
+    margin-bottom: 20px;
+}
+
 input {
     width: 200px;
     border: 1px solid;
@@ -127,7 +131,18 @@ p {
     margin-left: 80px;
 }
 
+#content span.subtitle {
+    display: block;
+    margin-left: 90px;
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
 #footer {
     height: 100px;
 }
 
+#errorExplanation {
+    margin-left: 20px;
+}

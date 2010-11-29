@@ -63,7 +63,7 @@ en:
         first_name: "Name"
         last_name: "Surname"
         birthday: "Birthday"
-        place_of_work: "Plase of work"
+        place_of_work: "Place of work"
         position: "Position"
       report:
         topic: "Topic"
