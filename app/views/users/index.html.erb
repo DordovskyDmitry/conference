@@ -6,11 +6,11 @@
     <table>
       <% @users[key].each do |user| %>
           <tr>
-            <td><%= user.full_name.force_encoding "utf-8" %></td>
-            <td><%= user.place_of_work.force_encoding "utf-8" %></td>
+            <td><%= user.full_name %></td>
+            <td><%= user.place_of_work %></td>
           </tr>
           <tr>
-            <td colspan=3><%= user.report.topic.force_encoding "utf-8" %></td>
+            <td colspan=3><%= user.report.topic %></td>
             <% if authenticated? %>
                 <td><%= link_to t('link.admin.show'), user %></td>
                 <td><%= link_to t('link.admin.edit_time'), edit_user_report_path(user), :remote => true %></td>
