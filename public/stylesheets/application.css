@@ -19,21 +19,31 @@ a, a:hover {
 }
 
 input {
-    width: 150px;
+    width: 200px;
+    border: 1px solid;
+}
+
+.button {
+  width: 80px;
+}
+
+#user_submit {
+    margin-left: 230px;
+}
+
+textarea {
+    width: 300px;
+    height: 100px;
+    border: 1px solid;
+}
+
+label {
+    float: left;
 }
 
 p {
     text-indent: 25px;
     margin-bottom: 1em;
-}
-
-.button {
-  width: 60px;
-}
-
-textarea {
-    width: 300px;
-    height: 100px
 }
 
 #header {
@@ -102,11 +112,22 @@ textarea {
     margin-bottom: 1em;
 }
 
+#content form div label{
+    float: left;
+    padding: 0 1em;
+    text-align: right;
+    width: 200px;
+}
+
 #content .branch {
     margin-left: 15px;
 }
 
+#content form h4{
+    margin-left: 80px;
+}
+
 #footer {
-    height: 30px;
+    height: 100px;
 }
 
