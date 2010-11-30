@@ -1,0 +1,77 @@
+<p>
+  <b>First name:</b>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <b>Birthday:</b>
+  <%= @user.birthday %>
+</p>
+
+<p>
+  <b>Place of work:</b>
+  <%= @user.place_of_work %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @user.position %>
+</p>
+
+<p>
+  <b>Topic:</b>
+  <%= @user.report.topic %>
+</p>
+
+<p>
+  <b>Section:</b>
+  <%= @user.report.section %>
+</p>
+
+<p>
+  <b>Begin report:</b>
+  <%= @user.report.begin_report %>
+</p>
+
+<p>
+  <b>End report:</b>
+  <%= @user.report.end_report %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @user.address.full_address %>
+</p>
+
+<p>
+  <b>Work phone:</b>
+  <%= @user.address.work_phone %>
+</p>
+
+<p>
+  <b>Home phone:</b>
+  <%= @user.address.home_phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.address.email %>
+</p>
+
+<p>
+  <b>Email invitation:</b>
+  <%= @user.address.email_invitation %>
+</p>
+
+<p>
+  <b>Postal invitation:</b>
+  <%= @user.address.post_invitation %>
+</p>
+
+
+<%= link_to t('user.edit'), edit_user_path(@user) %>
