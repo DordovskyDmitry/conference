@@ -1,7 +1,7 @@
 <% if authenticated? %>
     <%= form_tag upload_path, :multipart => true do %>
         <%= file_field_tag :upload %>
-        <%= submit_tag %>
+        <%= submit_tag 'Upload', :class => 'button' %>
     <% end %>
 <% end %>
 
@@ -14,11 +14,11 @@
       <% hash.each_key do |date| %>
           <tr><h5><%= date.inspect %></h5></tr>
           <% hash[date].each do |user| %>
-              <tr>
-                <td><%= user.full_name.force_encoding "utf-8" %></td>
-                <td><%= user.place_of_work.force_encoding "utf-8" %></td>
-                <td><%= user.report.topic.force_encoding "utf-8" %></td>
-                <td><%= "#{user.report.begin_report.strftime('%H:%M')} - #{user.report.end_report.strftime('%H:%M')}" %></td>
+              <tr class='user_info'>
+                <td class='name2'><%= user.full_name%></td>
+                <td class='work2'><%= user.place_of_work %></td>
+                <td class='topic2'><%= user.report.topic %></td>
+                <td class='time2'><%= "#{user.report.begin_report.strftime('%H:%M')} - #{user.report.end_report.strftime('%H:%M')}" %></td>
               </tr>
               <% if authenticated? %>
                   <tr>

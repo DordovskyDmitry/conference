@@ -1,23 +1,26 @@
-<h1><%= User.model_name.human(:count => @users.count) %></h1>
-
+<h3><%= User.model_name.human(:count => @users.count) %></h3>
+<br/>
+<br/>
 
 <% @users.each_key do |key| %>
-    <h3><%= key %></h3>
+    <h4><%= key %></h4>
     <table>
       <% @users[key].each do |user| %>
-          <tr>
-            <td><%= user.full_name %></td>
-            <td><%= user.place_of_work %></td>
+          <tr class='user_info'>
+            <td class='name'><%= user.full_name %></td>
+            <td class='work'><%= user.place_of_work %></td>
+            <td class='topic' colspan=3><%= user.report.topic %></td>
           </tr>
-          <tr>
-            <td colspan=3><%= user.report.topic %></td>
-            <% if authenticated? %>
+
+          <% if authenticated? %>
+              <tr>
                 <td><%= link_to t('link.admin.show'), user %></td>
                 <td><%= link_to t('link.admin.edit_time'), edit_user_report_path(user), :remote => true %></td>
                 <td><%= link_to t('link.admin.edit'), edit_user_path(user) %></td>
                 <td><%= link_to t('link.admin.delete'), user, :confirm => "confirmation", :method => :delete %></td>
-            <% end %>
-          </tr>
+              </tr>
+          <% end %>
+
           <% if authenticated? %>
               <tr id=<%= "form_#{user.id}" %>>
                 <td colspan=3>
@@ -25,7 +28,7 @@
                       <%= f.error_messages %>
                       <%= f.datetime_select :begin_report, :discard_year => true %>
                       <%= f.datetime_select :end_report, :discard_year => true %>
-                      <%= f.submit %>
+                      <%= f.submit 'Update' %>
                   <% end %>
                 </td>
               </tr>

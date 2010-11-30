@@ -1,5 +1,5 @@
 class DataFileController < ApplicationController
-  before_filter :required_admin
+  before_filter :require_admin
 
   def upload
     begin

@@ -4,10 +4,10 @@
 en:
   menu:
     main: "Main"
-    contacts: "Contacts"
-    list:  "List of participants"
     registration: "Registration"
+    list:  "List of participants"
     program: "Conference program"
+    contacts: "Contacts"
   flash:
     add_user: "Participant was added."
     update_user: "Participant was updated."
@@ -29,6 +29,7 @@ en:
       show: "Show participant"
       edit: "Edit participant"
       new: "Registration"
+      program: "Conference program"
     reports:
       edit: "Edit report"
     user_sessions:
