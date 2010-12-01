@@ -9,14 +9,13 @@
           <tr class='user_info'>
             <td class='name'><%= user.full_name %></td>
             <td class='work'><%= user.place_of_work %></td>
-            <td class='topic' colspan=3><%= user.report.topic %></td>
+            <td class='topic'><%= user.report.topic %></td>
           </tr>
 
           <% if authenticated? %>
               <tr>
                 <td><%= link_to t('link.admin.show'), user %></td>
                 <td><%= link_to t('link.admin.edit_time'), edit_user_report_path(user), :remote => true %></td>
-                <td><%= link_to t('link.admin.edit'), edit_user_path(user) %></td>
                 <td><%= link_to t('link.admin.delete'), user, :confirm => "confirmation", :method => :delete %></td>
               </tr>
           <% end %>

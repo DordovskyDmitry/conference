@@ -3,29 +3,34 @@
         <%= file_field_tag :upload %>
         <%= submit_tag 'Upload', :class => 'button' %>
     <% end %>
+    <%= link_to('Delete', delete_all_path, :method => :delete) if @pdf %>
 <% end %>
 
+<h3><%= t('shedule') %></h3>
+<br/>
 <%= link_to(t('rasp'), @pdf) if @pdf %>
-<%= link_to(t('del'), delete_all_path, :method => :delete) if @pdf %>
+<br/>
 
 <% @users.each do |section, hash| %>
     <h3><%= section %></h3>
     <table>
       <% hash.each_key do |date| %>
-          <tr><h5><%= date.inspect %></h5></tr>
+          <tr>
+            <h5><%= date.inspect %></h5>
+          </tr>
           <% hash[date].each do |user| %>
               <tr class='user_info'>
-                <td class='name2'><%= user.full_name%></td>
+                <td class='name2'><%= user.full_name %></td>
                 <td class='work2'><%= user.place_of_work %></td>
                 <td class='topic2'><%= user.report.topic %></td>
                 <td class='time2'><%= "#{user.report.begin_report.strftime('%H:%M')} - #{user.report.end_report.strftime('%H:%M')}" %></td>
               </tr>
               <% if authenticated? %>
                   <tr>
-                    <td><%= link_to t('link.admin.show'), user %></td>
-                    <td><%= link_to t('link.admin.edit_time'), edit_user_report_path(user), :remote => true %></td>
-                    <td><%= link_to t('link.admin.edit'), edit_user_path(user) %></td>
-                    <td><%= link_to t('link.admin.delete'), user, :confirm => "confirmation", :method => :delete %></td>
+                    <td class='link'><%= link_to t('link.admin.show'), user %></td>
+                    <td class='link'><%= link_to t('link.admin.edit_time'), edit_user_report_path(user), :remote => true %></td>
+                    <td class='link'><%= link_to t('link.admin.edit'), edit_user_path(user) %></td>
+                    <td class='link'><%= link_to t('link.admin.delete'), user, :confirm => "confirmation", :method => :delete %></td>
                   </tr>
               <% end %>
           <% end %>

@@ -24,7 +24,7 @@
 
         <div>
           <%= r.label :topic %>
-          <%= r.text_field :topic %>
+          <%= r.text_field :topic, :class => 'report_thema' %>
         </div>
         <div>
           <%= r.label :section %>
@@ -61,7 +61,7 @@
           <%= a.text_field :home_phone %>
         </div>
 
-        <h4>Invitation methods:</h4>
+        <h4><%= t('invitation')%>:</h4>
         <br />
         <div>
           <%= a.label :email_invitation %>
@@ -73,7 +73,5 @@
         </div>
     <% end %>
 
-    <%= f.submit 'Create', :class => 'button' %>
+    <%= f.submit t('create'), :class => 'button' %>
 <% end %>
-
-<%= t 'some text about hostel' %> <%= mail_to "conf_ma2011@mail.ru" %>

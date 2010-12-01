@@ -171,6 +171,9 @@ ru:
     user_sessions:
       new: "Login"
 
+  subtitle:
+    reg: "Регистрационная форма"
+
   auth:
     login: "Админ?"
     logout: "Выйти"
@@ -211,4 +214,11 @@ ru:
         work_phone: "Рабочий телефон"
         home_phone: "Домашний телефон"
         email:  "Email"
-        report_method: "Способ уведомления"
+        email_invitation: "Приглашение на email"
+        post_invitation: "Приглашение почтой"
+
+  create: "Отправить"
+  invitation: "Метод приглашения"
+  questions: "По любым вопросам обращайтесь на наш email адрес:"
+  rasp: "Скачать расписание конференции"
+  shedule: "Расписание докладов"

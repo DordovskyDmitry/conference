@@ -35,6 +35,9 @@ en:
     user_sessions:
       new: "Login"
 
+  subtitle:
+    reg: "Registration form"
+
   auth:
     login: "Admin?"
     logout: "Logout"
@@ -74,4 +77,11 @@ en:
         work_phone: "Work phone"
         home_phone: "Home phone"
         email:  "Email"
-        report_method: "Report method"
+        email_invitation: "Email invitation"
+        post_invitation: "Postal invitation"
+
+  create: "Create"
+  invitation: "Invitation methods"
+  questions: "If you have any questions, please contact:"
+  rasp: "Download the conference schedule"
+  shedule: "Schedule reports"

@@ -28,7 +28,7 @@ input {
 }
 
 .button {
-    width: 80px;
+    width: 90px;
 }
 
 #user_submit {
@@ -37,6 +37,14 @@ input {
 
 #report_submit {
     width: 80px;
+}
+
+#admin {
+    width: 100px;
+}
+
+.link {
+    width: 200px;
 }
 
 textarea {
@@ -52,6 +60,10 @@ label {
 p {
     text-indent: 25px;
     margin-bottom: 1em;
+}
+
+.report_thema {
+    width: 300px;
 }
 
 #header {
@@ -147,14 +159,9 @@ table {
     margin-bottom: 20px;
 }
 
-table tr.user_info {
-    display: inline-block;
-    padding: 5px 0;
-    border: 1px black solid;
-}
-
 table tr td {
-    padding-left: 5px;
+    padding: 5px;
+    border: 1px black solid;
 }
 
 .name, .name2, .work2{
