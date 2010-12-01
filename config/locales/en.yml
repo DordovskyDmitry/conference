@@ -18,6 +18,7 @@ en:
       delete: "Delete"
       show: "Show"
       edit_time: "Change time"
+      delete_time: "Delete time"
   confirmation: "Are you sure?"
 
   titles:

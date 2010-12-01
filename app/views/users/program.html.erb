@@ -29,7 +29,7 @@
                   <tr>
                     <td class='link'><%= link_to t('link.admin.show'), user %></td>
                     <td class='link'><%= link_to t('link.admin.edit_time'), edit_user_report_path(user), :remote => true %></td>
-                    <td class='link'><%= link_to t('link.admin.edit'), edit_user_path(user) %></td>
+                    <td class='link'><%= link_to t('link.admin.delete_time'), delete_time_user_report_path(user) %></td>
                     <td class='link'><%= link_to t('link.admin.delete'), user, :confirm => "confirmation", :method => :delete %></td>
                   </tr>
                   <tr style="display:none" id=<%= "form_#{user.id}"%>>

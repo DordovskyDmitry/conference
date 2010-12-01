@@ -11,6 +11,14 @@ class ReportsController < ApplicationController
     redirect_to root_url
   end
 
+  def delete_time
+    report = @user.report
+    report.begin_report = nil
+    report.end_report = nil
+    report.save
+    redirect_to root_url
+  end
+
   private
 
   def set_user

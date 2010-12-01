@@ -60,7 +60,11 @@ Conference::Application.routes.draw do
     match 'page/:action', :controller => :static
 
     resources :users do
-      resource :report, :only => [:edit, :update]
+      resource :report, :only => [:edit, :update] do
+        member do
+          get :delete_time
+        end
+      end
 
       collection do
         get :program
