@@ -21,7 +21,7 @@
           <% end %>
 
           <% if authenticated? %>
-              <tr id=<%= "form_#{user.id}" %>>
+              <tr style="display:none" id=<%= "form_#{user.id}" %>>
                 <td colspan=3>
                   <% form_for user.report, :url => user_report_path(user) do |f| %>
                       <%= f.error_messages %>
