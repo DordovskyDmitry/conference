@@ -13,11 +13,10 @@
 
 <% @users.each do |section, hash| %>
     <h3><%= section %></h3>
-    <table>
-      <% hash.each_key do |date| %>
-          <tr>
-            <h5><%= date.inspect %></h5>
-          </tr>
+    <br />
+    <% hash.each_key do |date| %>
+        <h5><%= date.inspect %></h5>
+        <table>
           <% hash[date].each do |user| %>
               <tr class='user_info'>
                 <td class='name2'><%= user.full_name %></td>
@@ -32,7 +31,7 @@
                     <td class='link'><%= link_to t('link.admin.delete_time'), delete_time_user_report_path(user) %></td>
                     <td class='link'><%= link_to t('link.admin.delete'), user, :confirm => "confirmation", :method => :delete %></td>
                   </tr>
-                  <tr style="display:none" id=<%= "form_#{user.id}"%>>
+                  <tr style="display:none" id=<%= "form_#{user.id}" %>>
                     <td colspan=4>
                       <% form_for user.report, :url => user_report_path(user) do |f| %>
                           <%= f.error_messages %>
@@ -44,6 +43,7 @@
                   </tr>
               <% end %>
           <% end %>
-      <% end %>
-    </table>
+        </table>
+    <% end %>
+
 <% end %>
