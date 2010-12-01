@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     @user = User.new params[:user]
     if @user.save
       flash[:notice] = t 'flash.add_user'
-      redirect_to root_url
+      redirect_to users_path
     else
       render :action => :new
     end
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
   def update
     if @user.update_attributes(params[:user])
       flash[:notice] = t 'flash.update_user'
-      redirect_to root_url
+      redirect_to user_path(@user)
     else
       render :action => :edit
     end
@@ -39,7 +39,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy
-    redirect_to root_url
+    redirect_to users_path
   end
 
   def program
