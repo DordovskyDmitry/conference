@@ -1,6 +1,6 @@
 <% if authenticated? %>
     <%= form_tag upload_path, :multipart => true do %>
-        <%= file_field_tag :upload %>
+        <%= file_field_tag :upload %><br />
         <%= submit_tag 'Upload', :class => 'button' %>
     <% end %>
     <%= link_to('Delete', delete_all_path, :method => :delete) if @pdf %>
