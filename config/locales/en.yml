@@ -12,6 +12,8 @@ en:
     add_user: "Participant was added."
     update_user: "Participant was updated."
     update_report: "Report was updated."
+    bad_add_user: "Participant was not added. Look for errors filling"
+    bad_update_user: "Report was not updated. Look for errors filling"
   link:
     admin:
       edit: "Edit"
@@ -31,6 +33,8 @@ en:
       edit: "Edit participant"
       new: "Registration"
       program: "Conference program"
+      create: "Registration"
+      update: "Edit participant"
     reports:
       edit: "Edit report"
     user_sessions:

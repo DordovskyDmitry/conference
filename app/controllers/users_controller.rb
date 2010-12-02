@@ -21,6 +21,7 @@ class UsersController < ApplicationController
       flash[:notice] = t 'flash.add_user'
       redirect_to users_path
     else
+      flash[:error] = t 'flash.bad_add_user'
       render :action => :new
     end
   end
@@ -33,6 +34,7 @@ class UsersController < ApplicationController
       flash[:notice] = t 'flash.update_user'
       redirect_to user_path(@user)
     else
+      flash[:error] = t 'flash.bad_update_user'
       render :action => :edit
     end
   end

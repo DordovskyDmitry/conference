@@ -194,3 +194,7 @@ table tr td {
 #errorExplanation {
     margin-left: 20px;
 }
+
+#errorExplanation h2, #errorExplanation p{
+    display: none;
+}

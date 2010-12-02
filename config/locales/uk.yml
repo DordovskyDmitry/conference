@@ -134,7 +134,6 @@ uk:
           few:    "%{model} не збережено через %{count} помилки"
           many:   "%{model} не збережено через %{count} помилок"
           other:  "%{model} не збережено через %{count} помилки"
-        # The variable :count is also available
         body: "Помилки виявлено в таких полях:"
 
       # The values :model, :attribute and :value are always available for interpolation
@@ -245,13 +244,15 @@ uk:
     add_user: "Участник доданий."
     update_user: "Участник оновлений."
     update_report: "Доповідь оновлена."
+    bad_add_user: "Участник не був доданий. Перевірте наявність і коректність даних"
+    bad_update_user: "Участник не був оновлений. Перевірте наявність і коректність даних"
   link:
     admin:
       edit: "Виправити"
       delete: "Видалити"
       show: "Показати"
       edit_time: "Задати час"
-      delete_time: "Удалити час"
+      delete_time: "Видалити час"
   confirmation: "Ви упевнені?"
 
   titles:
@@ -264,6 +265,8 @@ uk:
       edit: "Виправити відомості"
       new: "Регистрація"
       program: "Програма конференції"
+      create: "Регистрація"
+      update: "Виправити відомості"
     reports:
       edit: "Виправити відомості про доповідь"
     user_sessions:
