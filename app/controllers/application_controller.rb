@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
 
   def set_locale
     # ((lang = request.env['HTTP_ACCEPT_LANGUAGE']) && lang[/^[a-z]{2}/])
-     I18n.locale = ['en', 'ru'].include?(params[:locale]) ? params[:locale] :  'en'
+     I18n.locale = ['en', 'ru', 'uk'].include?(params[:locale]) ? params[:locale] :  'en'
   end
 
   def default_url_options(options = {})

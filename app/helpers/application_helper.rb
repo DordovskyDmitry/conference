@@ -6,7 +6,7 @@ module ApplicationHelper
       this_page = root_url
     end
 
-    ['ru', 'en'].each do |lang|
+    ['ru', 'en', 'uk'].each do |lang|
       this_page.gsub!(/\/[a-z]{2}(\/|$)/, "/#{lang}/")
       concat content_tag :span, link_to(lang, "#{this_page}")
     end
