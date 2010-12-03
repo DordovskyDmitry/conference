@@ -69,19 +69,19 @@ en:
         other:  "Addresses"
     attributes:
       user:
-        first_name: "Name"
-        last_name: "Surname"
-        birthday: "Birthday"
-        place_of_work: "Place of work"
-        position: "Position"
+        first_name: "Name*"
+        last_name: "Surname*"
+        birthday: "Birthday*"
+        place_of_work: "Place of work*"
+        position: "Position*"
       report:
-        topic: "Topic"
-        section: "Section"
+        topic: "Topic*"
+        section: "Section*"
       address:
-        full_address: "Full address"
+        full_address: "Full address*"
         work_phone: "Work phone"
         home_phone: "Home phone"
-        email:  "Email"
+        email:  "Email*"
         email_invitation: "Email invitation"
         post_invitation: "Postal invitation"
 

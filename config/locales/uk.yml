@@ -302,19 +302,19 @@ uk:
         other:  "Адреси"
     attributes:
       user:
-        first_name: "Ім'я"
-        last_name: "Прізвище"
-        birthday: "Дата народження"
-        place_of_work: "Місце роботы"
-        position: "Посада"
+        first_name: "Ім'я*"
+        last_name: "Прізвище*"
+        birthday: "Дата народження*"
+        place_of_work: "Місце роботы*"
+        position: "Посада*"
       report:
-        topic: "Тема доповіді"
-        section: "Секція"
+        topic: "Тема доповіді*"
+        section: "Секція*"
       address:
-        full_address: "Адреса"
+        full_address: "Адреса*"
         work_phone: "Робочий телефон"
         home_phone: "Домашній телефон"
-        email:  "Email"
+        email:  "Email*"
         email_invitation: "Запрошення на email"
         post_invitation: "Запрошення поштою"
 

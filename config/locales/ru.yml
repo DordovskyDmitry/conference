@@ -206,19 +206,19 @@ ru:
         other:  "Адреса"
     attributes:
       user:
-        first_name: "Имя"
-        last_name: "Фамилия"
-        birthday: "Дата рождения"
-        place_of_work: "Место работы"
-        position: "Должность"
+        first_name: "Имя*"
+        last_name: "Фамилия*"
+        birthday: "Дата рождения*"
+        place_of_work: "Место работы*"
+        position: "Должность*"
       report:
-        topic: "Тема доклада"
-        section: "Секция"
+        topic: "Тема доклада*"
+        section: "Секция*"
       address:
-        full_address: "Адрес"
+        full_address: "Адрес*"
         work_phone: "Рабочий телефон"
         home_phone: "Домашний телефон"
-        email:  "Email"
+        email:  "Email*"
         email_invitation: "Приглашение на email"
         post_invitation: "Приглашение почтой"
 
