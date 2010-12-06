@@ -276,7 +276,7 @@ uk:
     reg: "Реєстраційна форма"
 
   auth:
-    login: "Адмін?"
+    login: "адмін?"
     logout: "Вийти"
 
   header:

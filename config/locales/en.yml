@@ -44,7 +44,7 @@ en:
     reg: "Registration form"
 
   auth:
-    login: "Admin?"
+    login: "admin?"
     logout: "Logout"
 
   header:

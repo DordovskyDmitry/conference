@@ -180,7 +180,7 @@ ru:
     reg: "Регистрационная форма"
 
   auth:
-    login: "Админ?"
+    login: "админ?"
     logout: "Выйти"
 
   header:
