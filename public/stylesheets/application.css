@@ -188,7 +188,17 @@ table tr td {
 }
 
 #footer {
-    height: 100px;
+    height: 80px;
+}
+
+#footer #donnu_link {
+    float: right;
+    margin-top: 40px;
+    margin-right: 50px;
+}
+
+#footer #donnu_link a {
+    color: gray; 
 }
 
 #errorExplanation {
