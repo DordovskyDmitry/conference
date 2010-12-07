@@ -30,3 +30,4 @@ db/schema.rb
 /config/environments/development.rb
 /config/database.yml
 /config/config.yml
+/config/deploy.rb
