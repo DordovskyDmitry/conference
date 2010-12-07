@@ -4,7 +4,7 @@ class UserSessionsController < ApplicationController
   end
 
   def create
-   if Digest::SHA1.hexdigest(params[:admin], PAS_SALT) == CRYPTED_PAS
+   if Digest::SHA1.hexdigest(params[:admin]+PAS_SALT) == CRYPTED_PAS
       session[:admin] = 'admin'
     end
     redirect_to root_url
