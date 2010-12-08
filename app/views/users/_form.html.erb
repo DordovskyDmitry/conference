@@ -32,17 +32,6 @@
           <%= r.label :section %>
           <%= r.select :section, Report::SECTION %>
         </div>
-
-        <% if params[:action] != "new" %>
-            <div>
-              <%= r.label :begin_report %>
-              <%= r.datetime_select :begin_report, :discard_year => true %>
-            </div>
-            <div>
-              <%= r.label :end_report %>
-              <%= r.datetime_select :end_report, :discard_year => true %>
-            </div>
-        <% end %>
     <% end %>
 
     <%= f.fields_for :address do |a| %>
