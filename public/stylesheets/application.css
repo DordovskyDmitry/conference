@@ -120,6 +120,10 @@ p {
     border-left: 2px black solid;
 }
 
+#content i {
+    font-weight: bold;
+}
+
 #content img {
     width: 400px;
     height: 400px;
@@ -145,6 +149,10 @@ p {
 
 #content form h4 {
     margin-left: 80px;
+}
+
+#content form h6 {
+    margin-left: 250px;
 }
 
 #content span.subtitle {

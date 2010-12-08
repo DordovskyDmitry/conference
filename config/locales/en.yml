@@ -72,10 +72,10 @@ en:
         first_name: "Name*"
         last_name: "Surname*"
         birthday: "Birthday*"
-        place_of_work: "Place of work*"
+        place_of_work: "Affiliation*"
         position: "Position*"
       report:
-        topic: "Topic*"
+        topic: "Title*"
         section: "Section*"
       address:
         full_address: "Full address*"
@@ -90,3 +90,4 @@ en:
   questions: "If you have any questions, please contact:"
   rasp: "Download the conference schedule"
   shedule: "Schedule reports"
+  ten: "Must be 10 digits (any format)"
