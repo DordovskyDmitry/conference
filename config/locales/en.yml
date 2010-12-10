@@ -79,7 +79,7 @@ en:
         section: "Section*"
       address:
         full_address: "Full address*"
-        work_phone: "Work phone"
+        work_phone: "Phone"
         home_phone: "Home phone"
         email:  "Email*"
         email_invitation: "Email invitation"

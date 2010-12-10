@@ -237,7 +237,7 @@ uk:
   menu:
     main: "Головна"
     registration: "Реєстрація"
-    list:  "Список участників"
+    list:  "Список учасників"
     program: "Програма конференції"
     contacts: "Контакти"
   flash:
@@ -312,7 +312,7 @@ uk:
         section: "Секція*"
       address:
         full_address: "Адреса*"
-        work_phone: "Робочий телефон"
+        work_phone: "Телефон"
         home_phone: "Домашній телефон"
         email:  "Email*"
         email_invitation: "Запрошення на email"

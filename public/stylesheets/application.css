@@ -18,6 +18,10 @@ a, a:hover {
     color: blue;
 }
 
+a img {
+    border-color: white;
+}
+
 #content form {
     margin-bottom: 20px;
 }
@@ -69,6 +73,10 @@ p {
 #header {
     height: 120px;
     padding-top: 10px;
+    margin-top: 20px;
+    margin-left: 40px;
+    background-image: url("/images/herb.jpg");
+    background-repeat: no-repeat;
 }
 
 #header #lang {
@@ -100,7 +108,7 @@ p {
 
 #menu {
     width: 210px;
-    margin-top: 50px;
+    margin-top: 100px;
     float: left;
 }
 
@@ -111,6 +119,11 @@ p {
 #menu li {
     list-style: none;
     margin-top: 10px;
+}
+
+#menu li a {
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 #content {
@@ -125,8 +138,11 @@ p {
 }
 
 #content img {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
+}
+
+#map {
     float: right;
     margin-left: 10px;
     margin-bottom: 10px;
@@ -151,10 +167,6 @@ p {
     margin-left: 80px;
 }
 
-#content form h6 {
-    margin-left: 250px;
-}
-
 #content span.subtitle {
     display: block;
     margin-left: 90px;
@@ -172,7 +184,7 @@ table tr td {
     border: 1px black solid;
 }
 
-.name, .name2, .work2{
+.name, .name2, .work2 {
     width: 150px;
     border-right: 1px black solid;
 }
@@ -206,13 +218,13 @@ table tr td {
 }
 
 #footer #donnu_link a {
-    color: gray; 
+    color: gray;
 }
 
 #errorExplanation {
     margin-left: 20px;
 }
 
-#errorExplanation h2, #errorExplanation p{
+#errorExplanation h2, #errorExplanation p {
     display: none;
 }

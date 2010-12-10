@@ -216,7 +216,7 @@ ru:
         section: "Секция*"
       address:
         full_address: "Адрес*"
-        work_phone: "Рабочий телефон"
+        work_phone: "Телефон"
         home_phone: "Домашний телефон"
         email:  "Email*"
         email_invitation: "Приглашение на email"
