@@ -1,4 +1,15 @@
+<% if authenticated? %>
+    <%= form_tag upload_path, :multipart => true do %>
+        <%= file_field_tag :upload %><br />
+        <%= hidden_field_tag :dirname, 'abstract' %><br />
+        <%= submit_tag 'Upload', :class => 'button' %>
+    <% end %>
+    <%= link_to('Delete', delete_all_path(:dirname => 'abstract'), :method => :delete) if @pdf %>
+<% end %>
+
 <h3><%= User.model_name.human(:count => @users.count) %></h3>
+<br/>
+<%= link_to(t('abstract'), @pdf) if @pdf %>
 <br/>
 <br/>
 

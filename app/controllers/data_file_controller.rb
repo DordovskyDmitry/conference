@@ -3,15 +3,15 @@ class DataFileController < ApplicationController
 
   def upload
     begin
-      DataFile.save(params[:upload])
+      DataFile.save(params[:upload], params[:dirname])
     rescue
-      flash[:error] = 'sdf'
+      flash[:error] = 'Upload error'
     end
     redirect_to :back
   end
 
   def delete_all
-    DataFile.delete_all_pdf
+    DataFile.delete_all_pdf(params[:dirname])
     redirect_to :back
   end
 end

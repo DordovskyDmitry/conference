@@ -1,19 +1,21 @@
 <% if authenticated? %>
     <%= form_tag upload_path, :multipart => true do %>
         <%= file_field_tag :upload %><br />
+        <%= hidden_field_tag :dirname, 'rasp' %><br />
         <%= submit_tag 'Upload', :class => 'button' %>
     <% end %>
-    <%= link_to('Delete', delete_all_path, :method => :delete) if @pdf %>
+    <%= link_to('Delete', delete_all_path(:dirname => 'rasp'), :method => :delete) if @pdf %>
 <% end %>
 
 <h3><%= t('shedule') %></h3>
 <br/>
 <%= link_to(t('rasp'), @pdf) if @pdf %>
 <br/>
+<br/>
 
 <% @users.each do |section, hash| %>
     <h3><%= section %></h3>
-    <br />
+    <br/>
     <% hash.each_key do |date| %>
         <h5><%= date.inspect %></h5>
         <table>
