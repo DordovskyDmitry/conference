@@ -177,6 +177,7 @@ p {
 
 table {
     margin-bottom: 20px;
+    border-collapse: collapse;
 }
 
 table tr td {
