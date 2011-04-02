@@ -4,12 +4,12 @@
         <%= hidden_field_tag :dirname, 'rasp' %><br />
         <%= submit_tag 'Upload', :class => 'button' %>
     <% end %>
-    <%= link_to('Delete', delete_all_path(:dirname => 'rasp'), :method => :delete) if @pdf %>
+    <%= link_to('Delete', delete_all_path(:dirname => 'rasp'), :method => :delete) if @pdf_rasp %>
 <% end %>
 
 <h3><%= t('shedule') %></h3>
 <br/>
-<%= link_to(t('rasp'), @pdf) if @pdf %>
+<%= link_to(t('rasp'), @pdf_rasp) if @pdf_rasp %>
 <br/>
 <br/>
 

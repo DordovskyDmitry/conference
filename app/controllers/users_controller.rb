@@ -4,7 +4,6 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all.group_by(&:section)
-    @pdf = DataFile.get_first_pdf('abstract').gsub('public', '')  unless  DataFile.get_first_pdf('abstract').blank?
   end
 
   def show
@@ -47,7 +46,7 @@ class UsersController < ApplicationController
 
   def program
     @users = User.for_program
-    @pdf = DataFile.get_first_pdf('rasp').gsub('public', '')  unless  DataFile.get_first_pdf('rasp').blank?
+    @pdf_rasp = DataFile.get_first_pdf('rasp').gsub('public', '')  unless  DataFile.get_first_pdf('rasp').blank?
   end
 
   private

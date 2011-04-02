@@ -40,6 +40,7 @@
       <li> <%= link_to(t("menu.list"), {:controller => :users, :action => :index}) %></li>
       <li> <%= link_to(t("menu.program"), program_users_path) %></li>
       <li> <%= link_to(t("menu.contacts"), {:controller => :static, :action => :contacts}) %></li>
+      <li> <%= link_to(t('abstract'), @pdf) if @pdf %> </li>
     </ul>
   </div>
 

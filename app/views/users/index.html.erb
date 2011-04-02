@@ -4,7 +4,7 @@
         <%= hidden_field_tag :dirname, 'abstract' %><br />
         <%= submit_tag 'Upload', :class => 'button' %>
     <% end %>
-    <%= link_to('Delete', delete_all_path(:dirname => 'abstract'), :method => :delete) if @pdf %>
+    <%= link_to('Delete last version of abstracts', delete_all_path(:dirname => 'abstract'), :method => :delete) if @pdf %>
 <% end %>
 
 <h3><%= User.model_name.human(:count => @users.count) %></h3>
