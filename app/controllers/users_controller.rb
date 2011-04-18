@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :require_admin, :only => [:show, :edit, :update, :destroy]
+  before_filter :require_admin, :except => [:index, :program]
   before_filter :get_user, :only => [:show, :edit, :update, :destroy]
 
   def index
