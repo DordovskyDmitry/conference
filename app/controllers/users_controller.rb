@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_filter :get_user, :only => [:show, :edit, :update, :destroy]
 
   def index
-    @users = User.all.group_by(&:section)
+    @users = User.find(:all, :include => [:report]).group_by(&:section)
   end
 
   def show
